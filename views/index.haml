@@ -1,0 +1,31 @@
+!!!
+%html
+  %head
+  %link{:type => 'text/css', :rel => 'stylesheet', :media => 'screen', :href => 'style.css'}
+%body
+  = haml :_header
+  #container
+    #message
+      = @message if !@message.nil?
+    #content
+      %form{:method => 'post', :action => 'pasta'}
+        %dl
+          %label{:for => 'title'} Title
+        %dd
+          %input{:type => 'text', :name => 'title'}
+        %dt
+          %label{:for => 'paster'} Paster
+        %dd
+          %input{:type => 'text', :name => 'paster'}
+        %dt
+          &nbsp;
+        %dd
+          %textarea{:name => 'content', :cols => 102, :rows =>20 }
+        %dd
+          %input{:type=>"submit"}
+          %div{:style => 'float:right;'}
+            %label{:for => 'language'} Language
+            %select{:name => 'language'}
+              - {'php' => 'Php', 'ruby' => 'Ruby', 'js' => 'JS', 'lisp' => 'Lisp'}.each do |k,l|
+                %option{ :value => k}
+                  = l

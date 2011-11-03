@@ -1,0 +1,13 @@
+!!!
+%html
+  %head
+  %link{:type => 'text/css', :rel => 'stylesheet', :media => 'screen', :href => 'style.css'}
+%body
+  = haml :_header
+  %ul
+    - @ps.each do |p|
+      %li
+        %a{ :href => 'pasta/'+p.id.to_s }
+          = p.title
+          - if !p.language.nil?
+            = ' - ' + p.language

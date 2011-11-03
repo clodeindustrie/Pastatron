@@ -1,0 +1,18 @@
+!!!
+%html
+  %head
+  %link{:type => 'text/css', :rel => 'stylesheet', :media => 'screen', :href => '/style.css'}
+%body
+  = haml :_header
+  - if !@p.nil?
+    %ul
+      %li
+        = @p.title
+      %li
+        = @p.paster
+      %li
+        = @p.language
+      %li
+        %div#pasta
+          = Albino.colorize(@p.content, @p.language)
+
