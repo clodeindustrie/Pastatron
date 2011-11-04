@@ -1,4 +1,4 @@
-require_relative 'app/pastotron'
+require_relative 'app/pastatron'
 
 desc "default task"
 task :default do

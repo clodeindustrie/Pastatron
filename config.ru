@@ -5,6 +5,6 @@ require 'sinatra'
 # Disable the builtin server
 disable :run
 
-require './app/pastotron'
+require './app/pastatron'
 
 run Sinatra::Application

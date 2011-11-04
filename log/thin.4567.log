@@ -3421,3 +3421,4 @@ TypeError - can't convert nil into String:
 127.0.0.1 - - [03/Nov/2011 13:51:50] "GET /style.css HTTP/1.1" 200 5185 0.0005
 127.0.0.1 - - [03/Nov/2011 13:55:32] "GET /pasta/7 HTTP/1.1" 200 7940 0.1044
 127.0.0.1 - - [03/Nov/2011 13:55:32] "GET /style.css HTTP/1.1" 200 5185 0.0004
+>> Exiting!

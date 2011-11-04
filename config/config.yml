@@ -1,14 +1,14 @@
 ---
-rackup: /home/sites/pastotron/config.ru
-pid: /home/sites/pastotron/tmp/dicsmethin.pid
+rackup: /home/sites/pastatron/config.ru
+pid: /home/sites/pastatron/tmp/dicsmethin.pid
 group: users
 address: 127.0.0.1
 timeout: 30
 port: 4567
-log: /home/sites/pastotron/log/thin.log
+log: /home/sites/pastatron/log/thin.log
 max_conns: 1024
 max_persistent_conns: 512
 environment: development
 daemonize: true
 user: jeremy
-chdir: /home/sites/pastotron
+chdir: /home/sites/pastatron
