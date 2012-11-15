@@ -33,16 +33,16 @@ end
 #
 
 class Pasta
-    include DataMapper::Resource
+  include DataMapper::Resource
 
-    property :id, Serial
-    property :content, Text
-    property :paster, String
-    property :title, String
-    property :language, String
+  property :id,       Serial
+  property :content,  Text
+  property :paster,   String
+  property :title,    String
+  property :language, String
 
-    property :created_at, DateTime
-    property :updated_at, DateTime
+  property :created_at, DateTime
+  property :updated_at, DateTime
 
 end
 
@@ -51,8 +51,7 @@ DataMapper.finalize
 
 # create a pasta
 post '/pasta' do
-  params[:created_at] = Time.now
-  params[:updated_at] = Time.now
+  params[:updated_at] = params[:created_at]= Time.now
   p = Pasta.new(params)
   if !p.save
     @message = "no Worky"
@@ -85,4 +84,3 @@ delete '/pasta/:id' do
         p.destroy
     end
 end
-# vim: set sts=2 ts=2 sw=2 expandtab:

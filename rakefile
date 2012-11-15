@@ -1,4 +1,10 @@
-require_relative 'app/pastatron'
+# Because of some difference between ruby 1.8.7 et 1.9.2
+if !defined? require_relative
+  require 'app/pastatron'
+else
+  require_relative 'app/pastatron'
+
+end
 
 desc "default task"
 task :default do

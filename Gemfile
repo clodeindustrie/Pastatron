@@ -1,10 +1,10 @@
-source "http://rubygems.org"
+source :rubygems
+gem "sinatra"
 gem "thin"
 gem "datamapper"
-gem "dm-couchdb-adapter"
+gem "sqlite3"
 gem "dm-sqlite-adapter"
 gem "rake"
-gem "sinatra"
 gem "haml"
 gem "json"
 gem "albino"
