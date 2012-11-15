@@ -1,0 +1,1 @@
+Just to practice a bit, this is a very simple pastebin like.
